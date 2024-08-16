@@ -23,7 +23,7 @@ let arr = [];
 
 
 
-
+// Logout 
 logout.addEventListener('click' , ()=>{
   signOut(auth).then(() => {
       console.log("Logout Successfuly");
@@ -76,7 +76,7 @@ desc.value = "";
   data();
 
 
-// Function to render todo data on the browser:
+// Render 
 function render() {
   products.innerHTML = "";
   if (arr.length === 0) {
@@ -85,19 +85,20 @@ function render() {
   }
   arr.map((items) => {
     products.innerHTML +=`
-  <div class="flex flex-col lg:flex-row gap-8">
-  <article class="flex-1">
-      <h2 class="text-4xl font-bold mb-4">${items.Place}</h2>
-      <div class="prose max-w-none mb-8">
-          <p>${items.desc}</p>
-      </div>
-      <div class="flex space-x-4">
-          <button id="editBtn">Edit</button>
-          <button id="deleteBtn">Delete</button>
-      </div>
-  </article>
-  </div>`;
+    <div class="mt-3 bg-base-300 rounded-box px-4 py-3 w-[550px]">
+    <article>
+    <h2 class="text-3xl font-bold mb-4">${items.Place}</h2>
+    <div class="mb-8">
+    <p>${items.desc}</p>
+    </div>
+    <div class="flex space-x-3">
+    <button id="editBtn" class="btn btn-primary">Edit</button>
+    <button id="deleteBtn" class="btn btn-primary">Delete</button>
+    </div>
+    </article>
+    </div>`;
   
+
 const editBtn = document.querySelectorAll("#editBtn");
 const deleteBtn = document.querySelectorAll("#deleteBtn");
 
@@ -129,8 +130,5 @@ btn.addEventListener("click" , async () => {
 });
 });
 }
-
-
-
 
 render()
