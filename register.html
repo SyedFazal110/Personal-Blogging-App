@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+
+    <!-- Font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- Daisyui CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet" />
+</head>
+<body class="relative flex flex-col items-center h-full bg-base-200">
+    
+
+    <!-- Navbar -->
+
+ <div class="bg-purple-600 text-white w-full flex justify-around h-9">
+   <div>
+       <p class="normal-case font-bold text-xl">Personal Blogging App</p>
+   </div>
+   <div>
+    <a class="font-bold" href="./login.html">Login</a>
+   </div>
+</div>
+
+
+
+<!-- Register form -->
+    <div class="text-4xl font-bold mt-5">
+         <h1>Signup</h1>
+    </div>
+
+    <div class=" w-full max-w-lg mt-5">
+       <form id="form" class="shadow-md rounded-lg px-12 pt-6 pb-6 mb-4">
+
+
+           <!-- First Name -->
+           <div class="mb-4">
+               <input id="firstName" class="input input-bordered w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="First Name">
+           </div>
+
+
+           <!-- Last Name -->
+           <div class="mb-4">
+               <input id="lastName" class="input input-bordered w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Last Name">
+           </div>
+
+
+           <!-- Email -->
+           <div class="mb-4">
+               <input id="email" class="input input-bordered w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" placeholder="Email">
+           </div>
+
+
+           <!-- Password -->
+           <div class="mb-5">
+               <input id="password" class="input input-bordered w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" placeholder="Password">
+           </div>
+
+
+           <!-- Repeat Password -->
+           <div class="mb-5">
+            <input id="repeatPassword" class="input input-bordered w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" placeholder="Repeat Password">
+           </div>
+
+
+           <!-- Register Button -->
+           <div class="flex items-center justify-center">
+               <button type="submit" class="btn btn-primary">REGISTER</button>
+           </div>
+       </form>
+   </div>
+  
+
+
+   <script type="module" src="register.js"></script>
+</body>
+</html>
