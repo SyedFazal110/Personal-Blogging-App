@@ -1,4 +1,4 @@
-import { onAuthStateChanged , signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+import { signOut } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 import { auth , db } from "./config.js"
 import { 
     collection,
@@ -62,7 +62,7 @@ desc.value = "";
 
   // read data
 
-  async function data() {
+async function data() {
     arr = [];
     const q = query(collection(db , "Blogs"));
     const querySnapshot = await getDocs(q);
@@ -71,9 +71,9 @@ desc.value = "";
     });
     console.log(arr);
     render();
-  }
+}
   
-  data();
+data();
 
 
 // Render 
